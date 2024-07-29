@@ -83,3 +83,43 @@ function lovefunc(flower1, flower2) {
   return flower1IsOdd != flower2IsOdd;
 }
 //task 7 ---
+
+//task 8 +++
+/*
+Regex validate PIN code
+  */
+function validatePIN(pin) {
+  let result = pin.match(/^\d{4,6}$/g);
+  if (result == null) {
+    return false;
+  }
+  return pin.length == 4 || pin.length == 6;
+}
+//task 8 ---
+
+//task 9 +++
+/*
+Basic Mathematical Operations
+  */
+function basicOp(operation, value1, value2) {
+  return eval(`${value1} ${operation} ${value2}`);
+}
+//task 9 ---
+
+//task 10 +++
+/*
+Jaden Casing Strings
+  */
+String.prototype.toJadenCase = function () {
+  let strArray = this.split(" ");
+  for (let i = 0; i < strArray.length; i++) {
+    strArray[i] = strArray[i].replace(
+      strArray[i][0],
+      strArray[i][0].toUpperCase()
+    );
+    console.log(strArray[i]);
+  }
+
+  return strArray.join(" ");
+};
+//task 10 ---
