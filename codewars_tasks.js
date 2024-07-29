@@ -26,7 +26,7 @@ var uniqueInOrder = function (iterable) {
 };
 //task 2 ---
 
-//ask 3 +++
+//task 3 +++
 /*
 Convert a Boolean to a String
 */
@@ -34,3 +34,52 @@ function booleanToString(b) {
   return b.toString();
 }
 //task 3 ---
+
+//task 4 +++
+/*
+Printer Errors
+*/
+function printerError(s) {
+  let strLength = s.length;
+  let errCount = 0;
+  for (let i = 0; i < s.length; i++) {
+    let code = s.charCodeAt(i);
+    if (code > 109 && code < 123) {
+      errCount++;
+    }
+  }
+  return errCount + "/" + strLength;
+}
+//task 4 ---
+
+//ask 5 +++
+/*
+Disemvowel Trolls
+  */
+function disemvowel(str) {
+  let replace = "[aeuio]";
+  let regExp = new RegExp(replace, "gi");
+  return str.replace(regExp, "");
+}
+//task 5 ---
+
+//task 6 +++
+/*
+You Can't Code Under Pressure #1
+  */
+function doubleInteger(i) {
+  return i * 2;
+}
+//task 6 ---
+
+//task 7 +++
+/*
+Opposites Attract
+  */
+function lovefunc(flower1, flower2) {
+  let flower1IsOdd = flower1 % 2 == 0;
+  let flower2IsOdd = flower2 % 2 == 0;
+
+  return flower1IsOdd != flower2IsOdd;
+}
+//task 7 ---
