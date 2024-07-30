@@ -123,3 +123,51 @@ String.prototype.toJadenCase = function () {
   return strArray.join(" ");
 };
 //task 10 ---
+
+//task 11 +++
+/*
+Count IP Addresses
+  */
+function solution(nums) {
+  if (nums == null) return [];
+  return nums.sort((a, b) => a - b);
+}
+//task 11 ---
+
+//task 12 +++
+/*
+Sort Numbers
+  */
+function ipsBetween(start, end) {
+  let count =
+    (end.split(".")[0] - start.split(".")[0]) * Math.pow(256, 3) +
+    (end.split(".")[1] - start.split(".")[1]) * Math.pow(256, 2) +
+    (end.split(".")[2] - start.split(".")[2]) * Math.pow(256, 1) +
+    (end.split(".")[3] - start.split(".")[3]) * 1;
+
+  return count;
+}
+//task 12 ---
+
+//task 13 +++
+/*
+Simple Fun #347: Bulb Maze I
+  */
+function bulbMaze(maze) {
+  let pass = true;
+  let reversed = false;
+  for (let i = 0; i < maze.length; i++) {
+    if (reversed && maze[i] == "x") {
+      console.log("maze[i] == x");
+      pass = false;
+      break;
+    } else if (!reversed && maze[i] == "o") {
+      console.log("maze[i] == 0");
+      pass = false;
+      break;
+    }
+    reversed = !reversed;
+  }
+  return pass;
+}
+//task 13 ---
