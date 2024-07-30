@@ -231,3 +231,64 @@ var number = function (busStops) {
   return result;
 };
 //task 16 ---
+
+//task 17 +++
+/*
+Credit Card Mask
+  */
+function maskify(cc) {
+  let str = cc.split("");
+  if (str.length > 4) {
+    for (let i = 0; i < str.length - 4; i++) {
+      str[i] = "#";
+    }
+  }
+  return str.join("");
+}
+//task 17 ---
+
+//task 18 +++
+/*
+Isograms
+  */
+function isIsogram(str) {
+  let result = true;
+  str = str.toLowerCase();
+  for (let i = 0; i < str.length; i++) {
+    if (str.indexOf(str[i]) !== i) {
+      result = false;
+      break;
+    }
+  }
+  return result;
+}
+//task 18 ---
+
+//task 19 +++
+/*
+Transportation on vacation
+  */
+function rentalCarCost(d) {
+  const price = 40;
+
+  if (d >= 3 && d < 7) {
+    return price * d - 20;
+  } else if (d >= 7) {
+    return price * d - 50;
+  }
+  return price * d;
+}
+//task 19 ---
+
+//task 20 +++
+/*
+Extract the IDs from the data set
+  */
+function extractIds(data) {
+  return [].concat(
+    ...Object.keys(data).map(function (item) {
+      return item === "id" ? data[item] : extractIds(data[item]);
+    })
+  );
+}
+//task 20 ---
