@@ -171,3 +171,63 @@ function bulbMaze(maze) {
   return pass;
 }
 //task 13 ---
+
+//task 14 +++
+/*
+Simple Pig Latin
+  */
+function pigIt(str) {
+  let newArray = [];
+  str.split(" ").forEach(function (value, index) {
+    if (/^[A-Za-z]+$/.test(value)) {
+      newArray.push(value.substring(1) + value[0] + "ay");
+    } else {
+      newArray.push(value);
+    }
+  });
+
+  return newArray.join(" ");
+}
+//task 14 ---
+
+//task 15 +++
+/*
+Who likes it?
+  */
+function likes(names) {
+  switch (names.length) {
+    case 0:
+      return "no one likes this";
+    case 1:
+      return names[0] + " likes this";
+    case 2:
+      return names[0] + " and " + names[1] + " like this";
+    case 3:
+      return names[0] + ", " + names[1] + " and " + names[2] + " like this";
+    default:
+      return (
+        names[0] +
+        ", " +
+        names[1] +
+        " and " +
+        (names.length - 2) +
+        " others like this"
+      );
+  }
+}
+//task 15 ---
+
+//task 16 +++
+/*
+Number of People in the Bus
+  */
+var number = function (busStops) {
+  let result = 0;
+
+  busStops.forEach(function (value, index) {
+    result += value[0] - value[1];
+    console.log(value);
+  });
+  return result;
+};
+//task 16 ---
