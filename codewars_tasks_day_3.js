@@ -93,3 +93,66 @@ function simpleMultiplication(number) {
   return number % 2 === 0 ? number * 8 : number * 9;
 }
 //task 7 ---
+
+//task 7 +++
+/*
+Simple multiplication
+*/
+function simpleMultiplication(number) {
+  return number % 2 === 0 ? number * 8 : number * 9;
+}
+//task 7 ---
+
+//task 8 +++
+/*
+Vowel Count
+*/
+function getCount(str) {
+  var m = str.match(/[aeiou]/gi);
+  return m === null ? 0 : m.length;
+}
+//task 8 ---
+
+//task 9 +++
+/*
+Build a pile of Cubes
+*/
+function findNb(m) {
+  let count = 1;
+  let check = 0;
+  while (check <= m) {
+    check += count ** 3;
+    if (check == m) {
+      return count;
+    }
+    count += 1;
+  }
+  return -1;
+}
+//task 9 ---
+
+//task 10 +++
+/*
+Rock Paper Scissors!
+*/
+const rps = (p1, p2) => {
+  if (p1 == p2) {
+    return "Draw!";
+  }
+
+  if (p1 == "scissors") {
+    if (p2 == "paper") return "Player 1 won!";
+    return "Player 2 won!";
+  }
+
+  if (p1 == "paper") {
+    if (p2 == "rock") return "Player 1 won!";
+    return "Player 2 won!";
+  }
+
+  if (p1 == "rock") {
+    if (p2 == "scissors") return "Player 1 won!";
+    return "Player 2 won!";
+  }
+};
+//task 10 ---
